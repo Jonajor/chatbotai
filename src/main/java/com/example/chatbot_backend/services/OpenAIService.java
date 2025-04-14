@@ -4,15 +4,17 @@ import com.theokanning.openai.service.OpenAiService;
 import com.theokanning.openai.completion.chat.ChatCompletionRequest;
 import com.theokanning.openai.completion.chat.ChatCompletionResult;
 import com.theokanning.openai.completion.chat.ChatMessage;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.util.Collections;
 
 @Service
 public class OpenAIService {
-    private static final String API_KEY = "";
+    @Value("${openai.api.key}")
+    private String apiKey;
 
     public String generateResponse(String userMessage) {
-        OpenAiService openAiService = new OpenAiService(API_KEY);
+        OpenAiService openAiService = new OpenAiService(apiKey);
 
         // Create a chat request using v1/chat/completions endpoint
         ChatCompletionRequest request = ChatCompletionRequest.builder()

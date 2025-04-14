@@ -35,7 +35,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.theokanning.openai-gpt3-java/service
 	implementation("com.theokanning.openai-gpt3-java:service:0.18.2")
 	// https://mvnrepository.com/artifact/com.twilio.sdk/twilio
-	implementation("com.twilio.sdk:twilio:10.6.9")
+	implementation("com.twilio.sdk:twilio:10.7.2")
 
 }
 
